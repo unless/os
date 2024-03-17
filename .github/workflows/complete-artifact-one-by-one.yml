@@ -16,7 +16,7 @@ on:
         type: choice
         description: 'Kernel branch'
         options:
-        - legacy
+        #- legacy
         - current
         - edge
         default: 'current'
@@ -25,14 +25,24 @@ on:
         type: choice
         description: 'Userspace'
         options:
+        #- jammy
+        #- mantic
         - bookworm
-        default: 'bookworm'
+        #- trixie
+        #- sid
+        default: 'jammy'
 
       armbian_ui:
         type: choice
         description: 'User interface (not all works)'
         options:
         - minimal
+        - server
+        - xfce
+        - gnome
+        - cinnamon
+        - i3-wm
+        - kde-plasma
         default: 'minimal'
 
       armbian_version:
